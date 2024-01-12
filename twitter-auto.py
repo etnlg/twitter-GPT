@@ -31,12 +31,12 @@ def tweet_anecdote(anecdote):
 
 gpt_key = openAI_key
 
-client_gpt = OpenAI(api_key = "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")
+client_gpt = OpenAI(api_key = openAI_key)
 
 completion = client_gpt.chat.completions.create(
   model="gpt-4",
   messages=[
-    {"role": "system", "content": "You are geopolitical and historical expert that loves fun facts, and you have a twitter account where you often post anecdotes and satistics about geopolitics."},
+    {"role": "system", "content": "You are historical teacher that loves fun facts, and you have a twitter account where you often post anecdotes and satistics about history of the world."},
     {"role": "user", "content": "Write a tweet"}
   ]
 )
